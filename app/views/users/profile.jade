@@ -1,0 +1,18 @@
+extends ../shared/template
+block content
+      .row
+        .col-xs-12.col-md-6#ownerInfo
+          table.table.table-hover#infoBorder
+            thead
+              tr
+                th#nameTh: a#aname(href='/profile/edit')= user.name || user.username
+                  span <br/> (update profile)
+                th.profilePhoto(style='background-image:url(#{user.photo});')
+            tbody
+              each prop in Object.keys(user)
+                unless prop === '_id' || prop === 'password' || prop === 'facebook' || prop === 'photo' || prop === 'type'  || prop === 'twitterId' || prop === 'githubId' || prop === 'googleId'
+                  tr
+                    td= prop.charAt(0).toUpperCase() + prop.substring(1)
+                    td= user[prop]
+
+        .col-md-6

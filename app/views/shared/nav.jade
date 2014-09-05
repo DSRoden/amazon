@@ -11,15 +11,31 @@
     .collapse.navbar-collapse#bs-navbar-collapse
       ul.nav.navbar-nav.navbar-right
         if user
+          li: a(href='/profile') Profile &nbsp
+            span.fa.fa-child.fa-4x
+          li: a(href='/cart') Cart &nbsp
+            span.fa.fa-shopping-cart.fa-4x
+          li: a(href='/products') Products &nbsp
+            span.fa.fa-tag.fa-4x
           li
             form.navbar-form(method='post', action='/logout')
               .form-group
                 input(type='hidden', name='_method', value='delete')
-                button.btn.btn-danger= user.email
+                button.btn.btn-danger= user.email || user.username || user.displayName
         else
           li: a(href='/register') Register &nbsp
             span.fa.fa-angellist.fa-4x
           li: a(href='/login') Login &nbsp
             span.fa.fa-key.fa-4x
+          li: a(href='auth/twitter') Twitter &nbsp
+            span.fa.fa-twitter.fa-4x
+          li: a(href='auth/github') Gihub &nbsp
+            span.fa.fa-github.fa-4x
+          li: a(href='auth/google') Google &nbsp
+            span.fa.fa-google.fa-4x
+          li: a(href='auth/facebook') Facebook &nbsp
+            span.fa.fa-facebook.fa-4x
+          li: a(href='auth/trello') Trello &nbsp
+            span.fa.fa-amazon.fa-4x
 
 

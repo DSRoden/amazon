@@ -12,6 +12,7 @@ exports.login = function(req, res){
 
 exports.logout = function(req, res){
   req.logout();
+  req.flash('notice', 'See you later!');
   res.redirect('/');
 };
 
@@ -25,4 +26,22 @@ exports.create = function(req, res){
   });
 };
 
+exports.edit = function(req, res){
+  res.render('users/edit');
+};
 
+exports.update = function(req, res){
+  req.user.update(req.body, function(err){
+    if(err){
+      req.flash('error', err);
+      res.redirect('/profile/edit');
+      return;
+    }
+    req.flash('notice','You have successfully update your profile.');
+    res.redirect('/profile');
+  });
+};
+
+exports.show = function(req, res){
+  res.render('users/profile');
+};

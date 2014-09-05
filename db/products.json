@@ -1,0 +1,33 @@
+{
+  "_id":{"$oid":"000000000000000000000001"},
+  "name":"ipad",
+  "photo":"https://d3nevzfk7ii3be.cloudfront.net/igi/AUyYoTvgxKMq5kC2",
+  "price":600.00
+}
+{
+  "_id":{"$oid":"000000000000000000000002"},
+  "name":"iphone",
+  "photo":"http://www.virginmobileusa.com/_img/_phones/iphone4s16gbwhitecpo/iphone4s16gbwhitecpo-overview-large.png?051413",
+  "price":400.00
+}
+{
+  "_id":{"$oid":"000000000000000000000003"},
+  "name":"macbook",
+  "photo":"https://www.apple.com/macbook-air/images/overview_wireless_hero_enhanced.png",
+  "price":1000.00
+}
+{
+  "_id":{"$oid":"000000000000000000000004"},
+  "name":"ipod",
+  "photo":"https://d3nevzfk7ii3be.cloudfront.net/igi/tcbxa1Eb6YMETIW2",
+  "price":100.00
+}
+{
+  "_id":{"$oid":"000000000000000000000005"},
+  "name":"ipad mini",
+  "photo":"http://i-cdn.phonearena.com/images/phones/38591-xlarge/Apple-iPad-mini.jpg",
+  "price":400.00
+}
+
+
+
